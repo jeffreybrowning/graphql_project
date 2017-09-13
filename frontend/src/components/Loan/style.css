@@ -1,0 +1,22 @@
+.loan {
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #86A3C3;
+  min-width: 440px;
+  height: 62px;
+  margin: 10px;
+  -webkit-box-shadow: 3px 3px 21px 2px rgba(0,0,0,0.13);
+  -moz-box-shadow: 3px 3px 21px 2px rgba(0,0,0,0.13);
+  box-shadow: 3px 3px 21px 2px rgba(0,0,0,0.13);
+}
+
+.loan .content {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loan .value {
+  color: white;
+  text-align: right;
+}
