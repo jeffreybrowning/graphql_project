@@ -18,6 +18,7 @@ def loans():
     data, total_remaining_amount, total_amount = get_total_amount_24_hour_exp_loans()
     return jsonify(data)
 
+
 @app.route('/<path:path>')
 def api(path):
     if os.path.exists("frontend/build/" + path):
