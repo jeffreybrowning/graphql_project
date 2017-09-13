@@ -11,10 +11,11 @@ class KivaClient():
         if not res.ok:
             return res.raise_for_status()
 
-        if res.json().get('errors'):
+        json = res.json()
+        if json.get('errors'):
             raise Exception(res.json()['errors'])
 
-        return res.json()
+        return json
 
 
 kiva_client = KivaClient
