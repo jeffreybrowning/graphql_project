@@ -22,7 +22,7 @@ All further directions for running code will be from this shell and directory.
 
 ### File structure
 
-- <root>
+- root
   - `constants.py`: static constants used in the other files
   - `loans.py`: data munging from specific queries from the kiva api dealing with loans
   - `clients.py`: class wrapper around a request library for hitting kiva's graphql url
@@ -32,7 +32,7 @@ All further directions for running code will be from this shell and directory.
 
 1. Loans
 
-When the loans file is run from the command line, it automatically runs the function that displays funding information and urls for all expiring loans in the next 24 hours which have the `fundRaising` status. To run this function, type the following in the `Kiva` directory. 
+When the loans file is run from the command line, it automatically runs the function that displays funding information and urls for all expiring loans in the next 24 hours which have the `fundRaising` status. To run this function:
 
 ```
 python loans.py
@@ -40,7 +40,7 @@ python loans.py
 
 2. Tests
 
-Since python 2.7, the `TestCase` class from the `unittest` module in Python's standard library has built-in test discovery and runner from the command line. To run tests, type the following in the `Kiva` directory.
+Since python 2.7, the `TestCase` class from the `unittest` module in Python's standard library has built-in test discovery and runner from the command line. To run tests:
 
 ```
 python -m unittest
