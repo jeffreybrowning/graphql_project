@@ -6,10 +6,15 @@ from constants import KIVA_GRAPHQL_URL
 class KivaClient():
     @staticmethod
     def query(querystring=''):
-        res = requests.get(KIVA_GRAPHQL_URL, params={'query': querystring}).json()
-        if res.get('errors'):
-            raise Exception(res['errors'])
-        return res
+        res = requests.get(KIVA_GRAPHQL_URL, params={'query': querystring})
+
+        if not res.ok:
+            return res.raise_for_status()
+
+        if res.json().get('errors'):
+            raise Exception(res.json()['errors'])
+
+        return res.json()
 
 
 kiva_client = KivaClient
