@@ -1,3 +1,6 @@
 env/
 .idea
 *.pyc
+/frontend/build
+/frontend/node_modules
+

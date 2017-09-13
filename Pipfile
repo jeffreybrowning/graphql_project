@@ -4,3 +4,6 @@ verify_ssl = true
 
 [packages]
 requests = "*"
+flask = "*"
+gunicorn = "*"
+flask-cors = "*"

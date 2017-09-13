@@ -1,0 +1,75 @@
+.App {
+  width: 100%;
+  background-color: #D8E0BB;
+}
+
+.App .jumbotron {
+  background-color: #7268A6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 1px 0px 12px 2px rgba(0,0,0,0.35);
+  -moz-box-shadow: 1px 0px 12px 2px rgba(0,0,0,0.35);
+  box-shadow: 1px 0px 12px 2px rgba(0,0,0,0.35);
+}
+
+.App .jumbotron .big-button {
+  cursor: pointer;
+  display: inline-block;
+  font: normal 18px/1 Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  text-shadow: 2px 4px 7px #666666;
+  -webkit-box-shadow: 3px 3px 21px 2px rgba(0,0,0,0.13);
+  -moz-box-shadow: 3px 3px 21px 2px rgba(0,0,0,0.13);
+  box-shadow: 3px 3px 21px 2px rgba(0,0,0,0.13);
+  background: #6B3074;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.App .jumbotron .big-button:hover {
+  background: #905399;
+  text-decoration: none;
+}
+
+.App .loans {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-left: 20%;
+}
+
+.App .loans .no-loans {
+  color: #888888;
+  font-size: 32px;
+  margin-top: 46vh;
+}
+
+a:link {
+  color: #FFF;
+}
+
+a:visited {
+  color: #B6CEC7;
+}
+
+a:hover {
+  color: #B6CEC7;
+}
+
+
+
+
+
