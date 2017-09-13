@@ -6,7 +6,7 @@ pip install --user pipenv
 ```
 
 2. Download sourcecode locally
-3. Inside the `Kiva` folder in the sourcecode run:
+3. In your new code directory run:
 
 ```
 pipenv install
@@ -22,7 +22,7 @@ All further directions for running code will be from this shell and directory.
 
 ### File structure
 
-- Kiva
+- <root>
   - `constants.py`: static constants used in the other files
   - `loans.py`: data munging from specific queries from the kiva api dealing with loans
   - `clients.py`: class wrapper around a request library for hitting kiva's graphql url
