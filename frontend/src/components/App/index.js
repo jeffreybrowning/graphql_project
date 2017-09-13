@@ -9,7 +9,7 @@ class App extends Component {
   state = {data: []};
 
   get_current_loans = () => {
-    request.get(window.location.protocol + '//' + window.location.hostname + ':5000' + '/loans', (error, response, body) => {
+    request.get(window.location.protocol + '/loans', (error, response, body) => {
       this.setState({data: JSON.parse(body)})
     })
   };
