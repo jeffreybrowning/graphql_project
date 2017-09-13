@@ -35,20 +35,20 @@ def get_total_amount_24_hour_exp_loans():
     total_amount_remaining = 0
     total_amount = 0
     loan_amounts_and_urls = []
-    for l in res.get('data', {}).get('loans', {}).get('values', []):
+    for loan in res.get('data', {}).get('loans', {}).get('values', []):
         # if the expiration date for the loan is not the next 24 hours, move on
-        if datetime.strptime(l['plannedExpirationDate'], DATETIME_FORMAT) - datetime.now() > timedelta(days=1):
+        if datetime.strptime(loan['plannedExpirationDate'], DATETIME_FORMAT) - datetime.now() > timedelta(days=1):
             continue
 
-        loan_url = KIVA_LOAN_DETAIL_URL.format(id=l['id'])
-        loan_amount = float(l['loanAmount'])
-        remaining_amount = loan_amount - float(l['loanFundraisingInfo']['fundedAmount'])
+        loan_url = KIVA_LOAN_DETAIL_URL.format(id=loan['id'])
+        loan_amount = float(loan['loanAmount'])
+        remaining_amount = loan_amount - float(loan['loanFundraisingInfo']['fundedAmount'])
 
         remaining_amount_str = DOLLAR_FORMAT.format(remaining_amount)
         print('\nLoan detail url: {}'.format(loan_url))
         print('Remaining amount: {}'.format(remaining_amount_str))
 
-        loan_amounts_and_urls.append({'url': KIVA_LOAN_DETAIL_URL.format(id=l['id']),
+        loan_amounts_and_urls.append({'url': KIVA_LOAN_DETAIL_URL.format(id=loan['id']),
                                       'remaining_amount': remaining_amount_str})
 
         total_amount_remaining += remaining_amount
