@@ -20,13 +20,10 @@ def loans():
 
 @app.route('/<path:path>')
 def api(path):
-    if path == "":
-        return send_from_directory('frontend/build', 'index.html')
+    if os.path.exists("frontend/build/" + path):
+        return send_from_directory('frontend/build', path)
     else:
-        if(os.path.exists("frontend/build/" + path)):
-            return send_from_directory('frontend/build', path)
-        else:
-            return send_from_directory('frontend/build', 'index.html')
+        return send_from_directory('frontend/build', 'index.html')
 
 
 if __name__ == '__main__':
